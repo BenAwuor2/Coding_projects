@@ -5,5 +5,5 @@ Beginner to Intermediate developers and designers who want to become comfortable
 |Day|Coding Challenge|
 |----|----|
 |Day 1|JavaScript Drum-kit|
-|||
+|Day 2|Loading Page|
 |||
