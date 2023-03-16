@@ -1,4 +1,5 @@
 # JavaScript Drum-kit
+![Drumkit](./images/drumkit.png)
 ## Objective
 The goal is to build a drum kit app that runs in the browser. 
 ### Concepts covered
