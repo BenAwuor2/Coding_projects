@@ -4,6 +4,10 @@ import Header from './components/Header';
 /* import Content from './components/Content'; */
 import Footer from './components/Footer';
 import Employees from './components/Employees';
+import {Route, Routes} from 'react-router-dom';
+import GroupedTeamMembers from './components/GroupedTeamMembers';
+import Nav from './components/Nav'; 
+import NotFound from './components/NotFound';
 
 function App() {
 
@@ -124,15 +128,35 @@ function App() {
 
   return (
     <div>
+      <Nav/>
       <Header team={team} 
       teamMemberCount = {employees.filter((employee) => employee.teamName === team).length}
        />
-      <Employees  employees={employees}
+       <Routes>
+              <Route path='/' 
+                element = {
+                  <Employees  employees={employees}
                   team={team}
                   handleEmployeeCardClick={handleEmployeeCardClick}
                   handleSelect={handleSelect}/>
+                }>
+
+                </Route>
+                <Route path='/GroupedTeamMembers' element = {<GroupedTeamMembers 
+                                                  employees={employees} 
+                                                  team={team} 
+                                                  setTeam={setTeam}/>}>
+                </Route>
+                <Route path='*' element={<NotFound/>}>
+
+                </Route>
+           
+       </Routes>
+      
       <Footer/>
+    
     </div>
+      
 
   );
 }
