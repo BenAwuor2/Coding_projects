@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.loading {
+    max-width: 50%;
+    line-height: 1.4;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.loading__author {
+    /*padding-left: 25%;*/
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: rgb(156, 49, 49);  
+    margin: 0.6rem 0 2rem 0;  
+    display: block;
+}
+/*Animating the loading icon */
+.loading__anim {
+    
+    
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border: 5px solid rgba(189,189,189 ,0.25);
+    border-left-color: rgba(3,155,229 ,1);  
+    border-top-color: rgba(3,155,229 ,1);
+    border-radius: 50%;
+    animation: rotate 600ms infinite linear;
+}
+@keyframes rotate { to {  transform: rotate(1turn) }}
